@@ -1,0 +1,28 @@
+{
+  "name": "WebExpressSite",
+  "version": "0.2.0",
+  "author": "<iniciosesion101@gmail.com>",
+  "description": "Aplicacion",
+  "contributors": [
+    {
+      "name": "elasesor",
+      "email": "iniciosesion101@gmail.com"
+    }
+  ],
+  "main": "./server.js",
+  "private":true,
+  "keywords": [
+    "azure",
+    "boilerplate",
+    "express"
+  ],
+  "dependencies": {
+    "jade": "0.28.1",
+    "express": "3.1.0"
+  },
+  "noAnalyze": true,
+  "license": "Apache",
+  "engines": {
+    "node": ">=0.6.14"
+  }
+}

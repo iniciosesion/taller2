@@ -1,0 +1,159 @@
+html(lang='en')
+  head  
+    meta(charset='ISO-8859-1')
+    title transUR
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='author', content='asesor')
+    //
+       css iconos 
+    //link(href='css/main/bootstrap-combined.no-icons.min.css', rel='stylesheet', type='text/css')
+    link(href='css/font-awesome/css/font-awesome.css', rel='stylesheet', type='text/css')
+    link(href='css/font-awesome/css/font-awesome.min.css', rel='stylesheet', type='text/css')
+    //
+       css barra superior 
+    link(href='css/main/bootstrap.min.css', rel='stylesheet', type='text/css')
+    link(href='css/main/bootstrap-responsive.min.css', rel='stylesheet')
+    //
+       css global
+    link(href='css/main/global.css', rel='stylesheet', type='text/css')
+    //link(href='style.css', rel='stylesheet', type='text/css')
+    //
+       css modales
+    link(href='css/main/bootstrap.css', rel='stylesheet')
+    
+    link(href='css/main/bootstrap-responsive.css', rel='stylesheet')
+   
+    
+  body
+    .navbar-wrapper
+      .container-fluid
+        .navbar.navbar-inverse
+          .navbar-inner
+            button.btn.btn-navbar(type='button', data-toggle='collapse', data-target='.nav-collapse')
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            a.brand() Cooperativa de transporte de pasajeros Urcuquí
+            .nav-collapse.collapse
+              ul.nav
+                li.active
+                  a()
+                    i.icon-home.icon-2x
+                    | Home
+                li
+                  a(href='#Contactos ')
+                    i.icon-list.icon-2x
+                    | Contactos
+                li.dropdown
+                  a.dropdown-toggle(href='#', data-toggle='dropdown')
+                    i.icon-tasks.icon-2x
+                    | Opciones
+                    b.caret
+                  ul.dropdown-menu
+                    li
+                      a() Acerca de 
+                    li
+                      a() Contactos
+                li
+                  a(href='#About')
+                    i.icon-tablet.icon-2x
+                    | Acerca de
+           
+         
+      #myCarousel1.carousel.slide
+        .carousel-inner
+          .item.active
+            img(src='imagen/1.png', alt='')
+            .container-fluid
+              .carousel-caption
+                h1 Servicios
+                p.lead
+                  | La cooperativa de transporte de pasajeros inter cantonal Urcuquí, le da la mas cordial bienvenida, y le invita a hacer uso de la aplicación, para prestarle un mejor servicio.
+                a.btn.btn-large.btn-primary(data-toggle='modal', href='#myLogin') Acceder a la aplicación
+          .item
+            img(src='imagen/2.png', alt='')
+            .container-fluid
+              .carousel-caption
+                h1 Frecuencias
+                p.lead
+                  | Ofrecemos el servicio de transporte público de pasajeros entre los cantones Ibarra - Urcuquí, de la provincia de Imbabura. Consulte nuestras frecuencias.
+                a.btn.btn-large.btn-primary(href='formulario.html') Leer mas
+          .item
+            img(src='imagen/3.png', alt='')
+            .container-fluid
+              .carousel-caption
+                h1 Turismo
+                p.lead
+                  | Incentivamos el intercambio cultural y turístico, visitando plazas cautivadoras y enigmáticas de la provincia de los lagos.
+                a.btn.btn-large.btn-primary(href='#') Buscar galeria
+                     
+        a.left.carousel-control(href='#myCarousel1', data-slide='prev') < 
+        a.right.carousel-control(href='#myCarousel1', data-slide='next')>
+     
+     
+    #myLogin.modal.hide.fade
+      .modal-header
+        button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+        h3 Login
+      .modal-body
+        input.form-control(type='email', placeholder='Ingrese email', required='required', autofocus='autofocus')
+        input.form-control(type='password', placeholder='Ingrese Password', required='required')
+      .modal-footer
+        a.btn.btn-primary(href='#') Ingresar
+        a.btn(href='#myRegistro') Registrar
+        
+       
+    #myRegistro.modal.hide.fade(tabindex='-1', data-width='760')
+      .modal-header
+        button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+        h4 Registro de usuarios
+      .modal-body
+        .row-fluid
+          .span6
+            p
+              label Nombres
+              input.form-control(type='text', placeholder='Ingrese Nombres')
+            p
+              label Apellidos
+              input.form-control(type='text', placeholder='Ingrese Apellidos')
+            p
+              label Email
+              input.form-control(type='text', placeholder='Ingrese Email')
+         
+          .span6
+            p
+              label Nro. telefono
+              input.form-control(type='text', placeholder='Ingrese Nro. telefono')
+            p
+              label Password
+              input.form-control(type='text', placeholder='Ingrese Password')
+            p
+              label Repita password
+              input.form-control(type='text', placeholder='Repita password')
+         
+        //
+           INICIO DEL CAPTCHA 
+        hr
+        img#captcha(src='css/captcha/library/vender/securimage/securimage_show.php', alt='CAPTCHA Image')
+        a.btn.btn-info.btn-sm(href='#', onclick='document.getElementById(\'captcha\').src = \'css/captcha/library/vender/securimage/securimage_show.php?\' + Math.random(); return false') Mostrar otra imagen
+        br
+        label.control-label(for='message') Código de la Imagen
+        input#captcha_code.form-control(type='text', name='captcha_code', placeholder='Por seguridad, ingrese el codigo desplegado en el cuadro.')
+        
+       
+      .modal-footer
+        button.btn(type='button', data-dismiss='modal') Cancelar
+        button.btn.btn-primary(type='button') Aceptar
+   
+    script(src='js/main/jquery.min.js')
+    script(src='js/main/bootstrap.min.js')
+    script
+      ! function($) {
+      $(function() {
+      // carousel demo
+      $('#myCarousel1').carousel()
+      })
+      }(window.jQuery)
+   
+    script(src='js/modal/bootstrap-modalmanager.js')
+    script(src='js/modal/bootstrap-modal.js')

@@ -1,0 +1,7 @@
+Express server listening on port \\.\pipe\87213b0a-1da2-4d06-a503-329c160cf656
+[90mGET / [32m200 [90m513ms - 6.54kb[0m
+[90mGET /carousel/carousel.css [33m404 [90m3ms[0m
+[90mGET / [36m304 [90m33ms[0m
+[90mGET /carousel/carousel.css [33m404 [90m1ms[0m
+[90mGET / [32m200 [90m21ms - 6.54kb[0m
+[90mGET /carousel/carousel.css [33m404 [90m2ms[0m

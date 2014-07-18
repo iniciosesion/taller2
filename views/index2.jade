@@ -1,0 +1,32 @@
+html
+  head
+    title Incluir iconos en Bootstrap 3
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
+    script(src='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js')
+  body
+    .container
+      p
+        strong Icono simple: 
+        span.glyphicon.glyphicon-phone
+      p
+        strong Botón icono: 
+        button.btn(type='button')
+          span.glyphicon.glyphicon-camera
+      p
+        strong
+          | Icono a la izquierda de un botón:
+          strong
+            button.btn(type='button')
+              span.glyphicon.glyphicon-info-sign
+              | Información
+      p
+        strong
+          | Icono a la derecha de un botón:
+          strong
+            button.btn(type='button')
+              | Actualizar
+              span.glyphicon.glyphicon-refresh

@@ -1,0 +1,177 @@
+html(lang='en')
+head
+    //
+      meta(charset='ISO-8859-1')
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title transUR
+    
+    link(href='css/bootstrap.min.css', rel='stylesheet')
+    link(href='carousel/carousel.css', rel='stylesheet')
+
+    //link(href='css/font-awesome/css/font-awesome.css', rel='stylesheet', type='text/css')
+    //link(href='css/font-awesome/css/font-awesome.min.css', rel='stylesheet', type='text/css')
+  
+  body
+    .navbar-wrapper
+      .container
+        .navbar.navbar-inverse.navbar-static-top(role='navigation')
+          .container
+            .navbar-header
+              button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                span.sr-only Toggle navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+              a.navbar-brand() Cooperativa de transporte Urcuquí
+            .navbar-collapse.collapse
+              ul.nav.navbar-nav
+                li.active
+                  a() Home
+                li
+                  a(href='#contact') Contactos 
+                li.dropdown
+                  a.dropdown-toggle(href='#', data-toggle='dropdown')
+                    | Opciones
+                    b.caret
+                  ul.dropdown-menu
+                    li
+                      a(href='#') Action
+                    li
+                      a(href='#') Another action
+                    li
+                      a(href='#') Something else here
+                    li.divider
+                    li.dropdown-header Nav header
+                    li
+                      a(href='#') Separated link
+                    li
+                      a(href='#') One more separated link
+                li
+                  a(href='#about') Acerca de  
+       
+      #myCarousel.carousel.slide(data-ride='carousel')
+        ol.carousel-indicators
+          li.active(data-target='#myCarousel', data-slide-to='0')
+          li(data-target='#myCarousel', data-slide-to='1')
+          li(data-target='#myCarousel', data-slide-to='2')
+        .carousel-inner
+          .item.active
+            img(src='images/11.png', alt='First slide')
+            .container
+              .carousel-caption
+                h1 Servicios 
+                p
+                  | La cooperativa de transporte de pasajeros inter cantonal Urcuquí, le da la mas cordial bienvenida, y le invita a hacer uso de la aplicación, para prestarle un mejor servicio.  
+                p
+                  button.btn.btn-primary.btn-lg(data-toggle='modal', data-target='#myLogin')
+                    | Acceder a la aplicación 
+                  
+          .item
+            img(src='images/12.png', alt='Second slide')
+            .container
+              .carousel-caption
+                h1 Frecuencias
+                p
+                  | Ofrecemos el servicio de transporte público de pasajeros entre los cantones Ibarra - Urcuquí, de la provincia de Imbabura. Consulte nuestras frecuencias.
+                p
+                  a.btn.btn-lg.btn-primary(href='#', role='button') Leer más
+          .item
+            img(src='images/13.png', alt='Third slide')
+            .container
+              .carousel-caption
+                h1 Turismo
+                p
+                  | Incentivamos el intercambio cultural y turístico, visitando plazas cautivadoras y enigmáticas de la provincia de los lagos.
+                p
+                  a.btn.btn-lg.btn-primary(href='#myLogin', role='button') Mostrar Galeria
+                  button.btn.btn-primary.btn-lg(data-toggle='modal', data-target='#myLogin')
+                    | Launch demo modal 
+        a.left.carousel-control(href='#myCarousel', data-slide='prev')
+          i.fa-angle-left.icon-2x
+        a.right.carousel-control(href='#myCarousel', data-slide='next')
+          i.fa-angle-right.icon-2x
+   
+        footer
+          br
+          p.pull-right
+            | © 2014 Cooperativa de transporte Urcuquí 
+       
+    // 
+      modales
+   
+    #myLogin.modal.fade
+      .modal-dialog
+        .modal-content
+          .modal-header
+            button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+            h4#myModalLabel.modal-title Autenticación
+          .modal-body
+            form(role='form')
+              .form-group
+                label(for='loginUsuario') Usuario
+                input#loginUsuario.form-control(type='text', placeholder='Ingrese usuario')
+              .form-group
+                label(for='loginPassword') Password
+                input#loginPassword.form-control(type='text', placeholder='Ingrese password')
+              
+          .modal-footer
+            button.btn.btn-block.btn-primary(type='button') Ingresar
+           
+            button.btn.btn-block.btn-success(data-toggle='modal', data-target='#myRegistro', data-dismiss='modal')
+              | Registrarse 
+            button.btn.btn-block.btn-alert(type='button', data-dismiss='modal') Salir
+            
+    #myRegistro.modal.fade
+      .modal-dialog
+        .modal-content
+          .modal-header
+            button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+            h4#myModalLabel.modal-title Registrarse
+          .modal-body
+            form(role='form')
+              .row
+                div.col-xs-12.col-sm-12.col-md-6.col-lg-6 
+                  .form-group
+                    label(for='registroNombres') Nombres
+                    input#registroNombres.form-control(type='text', placeholder='Ingrese Nombres')
+                  .form-group
+                    label(for='registroApellidos') Apellidos
+                    input#registroApellidos.form-control(type='text', placeholder='Ingrese Apellidos')
+                  .form-group
+                    label(for='registroEmail') Email
+                    input#registroEmail.form-control(type='text', placeholder='Ingrese Email') 
+                div.col-md-6.col-lg-6 
+                  .form-group
+                    label(for='registroTelefono') Nro. Telefono
+                    input#registroTelefono.form-control(type='text', placeholder='Ingrese Nro.Telefono')
+                  .form-group
+                    label(for='registroPassword') Password
+                    input#registroPassword.form-control(type='text', placeholder='Ingrese password')         
+                  .form-group
+                    label(for='registroRepitaPassword') Repita Password
+                    input#registroRepitaPassword.form-control(type='text', placeholder='Repita password') 
+                    br
+                //- var camino = { dir: 'css/captcha/library/vender/securimage/securimage_show.php'}
+                
+                  img#captcha(src='css/captcha/library/vender/securimage/securimage_show.php', alt='CAPTCHA Image')
+                  a.btn.btn-info.btn-sm(href='#', onclick='document.getElementById(\'captcha\').src = \'library/vender/securimage/securimage_show.php?\' + Math.random(); return false') Show a Different Image
+                  br                 
+
+                label.control-label(for='message') Código de la Imagen
+                input#captcha_code.form-control(type='text', name='captcha_code', placeholder='Por seguridad, ingrese el codigo desplegado en el cuadro.')
+
+
+                                        
+          .modal-footer
+            button.btn.btn-block.btn-primary(type='button') Aceptar
+            button.btn.btn-block.btn-alert(type='button', data-dismiss='modal') Cancelar
+       
+     
+    //
+       Bootstrap core JavaScript
+   
+    script(src='js/jquery.min.js')
+    script(src='js/bootstrap.min.js')
+    
